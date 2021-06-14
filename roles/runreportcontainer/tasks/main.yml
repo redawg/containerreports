@@ -6,6 +6,7 @@
       - name: OS Report directory is present
         file:
           path: "{{ home_dir }}/reports/css"
+          owner: "{{report_user}}"
           state: directory
 
       - name: CSS is present on remote host
