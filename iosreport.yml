@@ -4,8 +4,6 @@
   hosts: ios
   gather_facts: false
   roles:
-    - role: reportcontainer
-      tags: ['creatcontainer']
     - role: networkverreport
       tags: ['netreport']
     - role: slackalerts
