@@ -18,3 +18,8 @@
   fail: msg='Please include the target_port to the variable "target_port"'
   run_once: true
   when: 'target_port is not defined'
+
+- name: 'Preflight Varible check :: report_user'
+  fail: msg='Please include the report_user to the variable "report_user"'
+  run_once: true
+  when: 'report_user is not defined'
