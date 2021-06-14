@@ -28,6 +28,4 @@
           ports:
             - "{{ target_port }}:8080"
       run_once: True
-      ansible_user: "{{reporthost_user}}"
-      ansbile_password: "{{ reporthost_password }}"
       delegate_to: "{{ container_host }}"
