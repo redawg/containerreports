@@ -21,7 +21,7 @@
       - name: OS Report container is launched
         containers.podman.podman_container:
           name: os-report
-          image: quay.io/samander/convert2rhel-os-dashboard:latest
+          image: quay.io/samander/nginx-report-base:latest
           state: started
           volume:
             - "{{ home_dir }}/reports:/var/report:Z"
