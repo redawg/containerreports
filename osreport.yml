@@ -9,4 +9,4 @@
     - role: osreport
       tags: ['osreport']
     - role: slackalerts
-      tags: ['slackalert']
+      when: 'slack_token is defined'
