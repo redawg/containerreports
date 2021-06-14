@@ -24,7 +24,7 @@
           image: quay.io/samander/convert2rhel-os-dashboard:latest
           state: started
           volume:
-            - "{{ home_dir }}/reprots:/var/report:Z"
+            - "{{ home_dir }}/reports:/var/report:Z"
           ports:
             - "{{ target_port }}:8080"
       run_once: True
