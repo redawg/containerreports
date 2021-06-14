@@ -1,7 +1,7 @@
 ---
 # Playbook to test new roles and tags
 - name: Generate Network Reports in container
-  hosts: all
+  hosts: ios
   gather_facts: false
   roles:
     - role: reportcontainer
@@ -10,4 +10,3 @@
       tags: ['netreport']
     - role: slackalerts
       tags: ['slackalert']
-      

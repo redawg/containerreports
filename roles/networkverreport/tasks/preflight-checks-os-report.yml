@@ -4,10 +4,10 @@
   run_once: true
   when: 'home_dir is not defined'
 
-- name: 'Preflight Varible check :: desired_version'
-  fail: msg='Please include the desired_version to the variable "desired_version"'
+- name: 'Preflight Varible check :: desired_ios_version'
+  fail: msg='Please include the desired_version to the variable "desired_ios_version"'
   run_once: true
-  when: 'desired_version is not defined'
+  when: 'desired_ios_version is not defined'
 
 - name: 'Preflight Varible check :: container_host'
   fail: msg='Please include the container_host to the variable "container_host"'
