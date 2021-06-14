@@ -1,0 +1,13 @@
+---
+    - include: preflight-checks-os-report.yml
+
+    - name: Sending URL link to Slack for Reports
+      slack:
+        token: "{{ slack_token }}"
+        msg: 'OS Inventory Report generated at http://{{container_host}}:{{target_port}}'
+        channel: "{{ channel }}"
+        username: "{{ slackuser }}"
+      run_once: true
+      delegate_to: localhost
+      when: 'slack_token is defined'
+      
