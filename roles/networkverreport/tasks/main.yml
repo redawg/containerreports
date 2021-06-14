@@ -12,5 +12,6 @@
         src: templates/report-ios.j2
         dest: "{{ home_dir }}/reports/ios.html"
       remote_user: "{{ reporthost_user }}"
+      ansible_password: "{{ reporthost_password }}"
       run_once: True
       delegate_to: "{{ container_host }}"
