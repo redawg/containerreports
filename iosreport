@@ -1,0 +1,12 @@
+---
+# Playbook to test new roles and tags
+- name: Generate Network Reports in container
+  hosts: all
+  gather_facts: true
+  roles:
+    - role: reportcontainer
+      tags: ['creatcontainer']
+    - role: networkverreport
+      tags: ['netreport']
+    - role: slackalerts
+      when: 'slack_token is defined'
