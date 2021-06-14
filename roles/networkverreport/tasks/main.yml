@@ -11,18 +11,18 @@
       block:
       - name: OS Report directory is present
         file:
-          path: "{{ home_dir }}/ios-report/css"
+          path: "{{ home_dir }}/reports/css"
           state: directory
 
       - name: CSS is present on remote host
         copy:
           src: CSS/main.css
-          dest: "{{ home_dir }}/ios-report/css/main.css"
+          dest: "{{ home_dir }}/reports/css/main.css"
 
       - name: HTML report is created
         template:
           src: templates/report-ios.j2
-          dest: "{{ home_dir }}/ios-report/iosreport.html"
+          dest: "{{ home_dir }}/reports/ios.html"
 
       - name: OS Report container is launched
         containers.podman.podman_container:
@@ -30,7 +30,7 @@
           image: quay.io/samander/convert2rhel-os-dashboard:latest
           state: started
           volume:
-            - "{{ home_dir }}/ios-report:/var/report:Z"
+            - "{{ home_dir }}/reports:/var/report:Z"
           ports:
             - "{{ target_port }}:8080"
       run_once: True
