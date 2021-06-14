@@ -1,0 +1,9 @@
+---
+# Playbook to test new roles and tags
+- name: Install and configure Container for Reports
+  hosts:
+  connection: local
+  gather_facts: False
+  roles:
+    - role: reportcontainer
+      tags: ['creatcontainer']
