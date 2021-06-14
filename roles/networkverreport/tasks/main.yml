@@ -8,12 +8,10 @@
       register: all_facts
 
     - name: HTML report is created
-      vars:
-
-        ansbile_password: "{{ reporthost_password }}"
       template:
         src: templates/report-ios.j2
         dest: "{{ home_dir }}/reports/ios.html"
       remote_user: "{{ reporthost_user }}"
+      remote_password: "{{ reporthost_password }}"
       run_once: True
       delegate_to: "{{ container_host }}"
