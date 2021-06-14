@@ -9,4 +9,5 @@
     - role: networkverreport
       tags: ['netreport']
     - role: slackalerts
+      tags: ['slackalert']
       when: 'slack_token is defined'
