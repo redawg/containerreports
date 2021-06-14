@@ -9,10 +9,11 @@
 
     - name: HTML report is created
       vars:
-        remote_user: "{{ reporthost_user }}"
+
         ansbile_password: "{{ reporthost_password }}"
       template:
         src: templates/report-ios.j2
         dest: "{{ home_dir }}/reports/ios.html"
+      remote_user: "{{ reporthost_user }}"
       run_once: True
       delegate_to: "{{ container_host }}"
