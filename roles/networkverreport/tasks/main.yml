@@ -8,8 +8,8 @@
       register: all_facts
 
     - name: HTML report is created
-        template:
-          src: templates/report-ios.j2
-          dest: "{{ home_dir }}/reports/ios.html"
+      template:
+        src: templates/report-ios.j2
+        dest: "{{ home_dir }}/reports/ios.html"
       run_once: True
       delegate_to: "{{ container_host }}"
