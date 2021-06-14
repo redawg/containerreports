@@ -15,7 +15,7 @@
 
       - name: HTML report is created
         template:
-          src: report-osversion.j2
+          src: templates/report-osversion.j2
           dest: "{{ home_dir }}/os-report/index.html"
 
       - name: OS Report container is launched
