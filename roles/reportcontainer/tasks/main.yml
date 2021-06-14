@@ -21,6 +21,6 @@
           port: "{{ target_port }}/tcp"
           state: enabled
           immediate: yes
-
+      ignore_errors: yes   
       run_once: True
       delegate_to: "{{ container_host }}"

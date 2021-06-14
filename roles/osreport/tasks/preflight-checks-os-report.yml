@@ -20,7 +20,7 @@
     fail: msg='Please include the channel to the variable "channel"'
     run_once: true
     when: 'channel is not defined'
-
+    
   - name: 'Preflight Varible check :: slackuser'
     fail: msg='Please include the slackuser to the variable "slackuser"'
     run_once: true
