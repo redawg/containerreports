@@ -24,7 +24,7 @@
           image: quay.io/samander/nginx-report-base:latest
           state: started
           volume:
-            - "{{ home_dir }}/reports:/var/report:Z"
+            - "{{ home_dir }}/reports:/var/report"
           ports:
             - "{{ target_port }}:8080"
       run_once: True
