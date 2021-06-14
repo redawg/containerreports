@@ -9,7 +9,7 @@
 
     - name: HTML report is created
       vars:
-        ansible_user: "{{ reporthost_user }}"
+        remote_user: "{{ reporthost_user }}"
         ansbile_password: "{{ reporthost_password }}"
       template:
         src: templates/report-ios.j2
