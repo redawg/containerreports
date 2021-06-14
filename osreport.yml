@@ -6,3 +6,5 @@
   roles:
     - role: reportcontainer
       tags: ['creatcontainer']
+    - role: osreport
+      tags: ['osreport']
