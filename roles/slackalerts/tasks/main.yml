@@ -2,6 +2,7 @@
     - include: preflight-checks-os-report.yml
 
     - name: Sending URL link to Slack for Reports
+      remote_user: "{{ report_user }}"
       slack:
         token: "{{ slack_token }}"
         msg: 'Container Report generated at http://{{container_host}}:{{target_port}}'

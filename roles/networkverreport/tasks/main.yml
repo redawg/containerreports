@@ -8,7 +8,7 @@
       register: all_facts
 
     - name: HTML report is created
-      remote_user: ansibleacct
+      remote_user: "{{ report_user }}"
       template:
         src: templates/report-ios.j2
         dest: "{{ home_dir }}/reports/ios.html"
