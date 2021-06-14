@@ -4,7 +4,7 @@
 
 
     - name: gathering all IOS facts
-      ios_facts:
+      cisco.ios.ios_facts:
       register: all_facts
 
     - name: HTML report is created
