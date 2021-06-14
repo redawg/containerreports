@@ -22,7 +22,7 @@
         containers.podman.podman_container:
           name: os-report
           image: quay.io/samander/nginx-report-base:latest
-          state: started
+          state: absent
           volume:
             - "{{ home_dir }}/reports:/var/report"
           ports:
