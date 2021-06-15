@@ -1,4 +1,4 @@
-## Container Reports
+# Container Reports
 This REPO contains everything you need to setup a container on RHEL 8 (Podman) and send differnet reports to that container to be viewed
 
 <pre class="line-number language-yaml"><code>
@@ -18,12 +18,12 @@ roles
 
 
 </code></pre>
-## Initial setup
+# Initial setup
 
 Create Credentials for Multiple SSH keys in a Template  (These will be used to change to access the container host to update the reports)
 https://access.redhat.com/solutions/3938741
 
-# INPUT CONFIGURATION:
+## INPUT CONFIGURATION:
 <pre class="line-number language-yaml">---
 fields:
   - type: string
@@ -35,11 +35,17 @@ fields:
     id: my_ssh_key
     label: Private Key
 </code></pre>
-# INJECTOR CONFIGURATION:
+## INJECTOR CONFIGURATION:
 <pre class="line-number language-yaml">extra_vars:
   my_ssh_key_file: '{{tower.filename}}'
 file:
   template: '{{my_ssh_key}}'
 </code></pre>
 
-# Create extar SSH_Key Credentials
+## Create extar SSH_Key Credentials
+Example: 
+
+![image](https://user-images.githubusercontent.com/17077661/121973639-9a8e2d80-cd32-11eb-89f9-506c23cef7fb.png)
+
+
+
