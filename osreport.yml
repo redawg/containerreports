@@ -3,7 +3,6 @@
 - name: Install and configure Container for Reports
   hosts: all
   gather_facts: false
-  ignore_unreachable: true
   roles:
     - role: osreport
       tags: ['osreport']
