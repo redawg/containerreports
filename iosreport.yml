@@ -5,6 +5,7 @@
   roles:
     - role: hostalive
       tags: ['hostalive']
+
 - name: Gather facts and create report on alive host group
   hosts: running_hosts
   gather_facts: false
