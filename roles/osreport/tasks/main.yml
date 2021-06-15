@@ -14,9 +14,9 @@
         - debug: msg="cannot connect to {{inventory_hostname}}"
 
 
--name: Gather facts on host that are up
- hosts: running_hosts
- tasks:
+- name: Gather facts on host that are up
+  hosts: running_hosts
+  tasks:
     - name: Gather facts on inventory
       setup:
       register: all_facts
