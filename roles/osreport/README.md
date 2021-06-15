@@ -20,3 +20,9 @@ Notice in the credentials it has 3 creds
 2 - Slack Token     # Optional if you want the template to send a link to the report when done
 3 - Report-ssh keys # This was the custome creds to created earlier to allow for changing of creds to the Container host to update the report
 
+channel: '#Toweralerts'
+container_host: 172.16.1.10
+home_dir: /var/lib/tmp
+report_user: ansibleacct
+slackuser: Ansible Controller
+target_port: 8081
