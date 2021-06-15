@@ -65,7 +65,7 @@ You will need privledged esclastion on target host the inventory can be by itsel
 
 ![image](https://user-images.githubusercontent.com/17077661/121974179-b940f400-cd33-11eb-9f91-05c3948031ab.png)
 
-## Vars needed for initcontianer.yml
+## Vars needed for initcontianer.yml  (Take note as you will need these later in the Report template setup)
 <pre class="line-number language-yaml">---
 container_host: 172.16.1.10        # Your target host for running the container
 report_user: ansibleacct           # Your account name that will be added reports to the container (ansible_user/remote_user) this should match the custome cred above
