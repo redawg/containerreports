@@ -3,7 +3,6 @@
 
     - name: Gather facts on inventory
       setup:
-      ignore_unreachable: true
       register: all_facts
 
     - name: HTML report is created
