@@ -3,7 +3,7 @@
   hosts: ios
   gather_facts: false
   roles:
-    - role: hostalive
+    - role: hostalivenetwork
       tags: ['hostalive']
 
 - name: Gather facts and create report on alive host group
