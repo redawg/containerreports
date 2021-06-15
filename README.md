@@ -49,7 +49,7 @@ Example:
 
 ## Inventory Setup
 
-In your inventory you will need to have your "Report Host" listed See Example mine report host will be 172.16.1.10 (This is needed if creds for report host differ from target report inventory  Example can be network devices and a report host:
+In your inventory you will need to have your "Report Host" listed See Example my report host will be 172.16.1.10 (This is needed if creds for report host differ from target report inventory  Example can be network devices and a report host:
 
 ![image](https://user-images.githubusercontent.com/17077661/121973760-d1644380-cd32-11eb-89cf-1ccfaadeb34f.png)
 
