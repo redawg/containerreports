@@ -6,5 +6,6 @@
   roles:
     - role: networkverreport
       tags: ['netreport']
+      
     - role: slackalerts
       tags: ['slackalert']
