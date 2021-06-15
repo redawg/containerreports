@@ -2,8 +2,8 @@
     - include: preflight-checks-os-report.yml
 
     - name: Gather facts on inventory
-        setup:
-        register: all_facts
+      setup:
+      register: all_facts
 
     - name: HTML report is created
       remote_user: "{{ report_user }}"
