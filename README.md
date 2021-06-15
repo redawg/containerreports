@@ -48,7 +48,7 @@ file:
   template: '{{ my_ssh_key }}'
 </code></pre>
 
-## Create extar SSH_Key Credentials
+## Create extra SSH_Key Credentials
 Example: 
 
 ![image](https://user-images.githubusercontent.com/17077661/121973639-9a8e2d80-cd32-11eb-89f9-506c23cef7fb.png)
