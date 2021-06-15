@@ -75,7 +75,10 @@ home_dir: /var/lib/tmp             # Where the root directory is setup on the co
 
 
 
+# Now you are ready to create templates and run reports
 
+Linux flavor report -- https://github.com/redawg/containerreports/tree/main/roles/osreport
+Ios version report  -- https://github.com/redawg/containerreports/tree/main/roles/networkverreport
 
 
 
