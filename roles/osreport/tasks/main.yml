@@ -8,6 +8,7 @@
     - name: Show all facts
       debug:
           var: all_facts
+          verbosity: 2
 
     - name: HTML report is created
       remote_user: "{{ report_user }}"
