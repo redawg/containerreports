@@ -6,5 +6,6 @@
   roles:
     - role: osreport
       tags: ['osreport']
+      
     - role: slackalerts
       tags: ['slackalert']

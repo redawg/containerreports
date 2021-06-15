@@ -12,8 +12,14 @@ EXAMPLE:
 
 Make sure you have your inventory setup and you have the creds to get to all the devices to do a gather facts (This can be run against cached facts also
 
+## NOTE-  For this to work you must have run at least one successful fact gather against the devices the inventory. It will try to gather the facts for update but will fail if any inventory item has not had gather facts cached for the device if it can't reach it during run.
+
+## Solutions:   Run Gather facts and cache against all device in OS inventory.  Or disable failed device in inventory and it will be skipped.
+
+
 EXAMPLE:
-![image](https://user-images.githubusercontent.com/17077661/121974772-fce82d80-cd34-11eb-8744-08cae38deabd.png)
+
+![image](https://user-images.githubusercontent.com/17077661/122108432-09ba5f00-cdd1-11eb-9771-a304822fa8a1.png)
 
 Notice in the credentials it has 3 creds
 1 - HOME machines   # this is your standard creds to access target report machines for gathering facts
@@ -22,7 +28,7 @@ Notice in the credentials it has 3 creds
 
 ## Extra Vars
 <pre class="line-number language-yaml">---
-channel: '#Toweralerts'          # Optional if send Slack
+channel: '#Toweralerts'          # Optional if sending Slack
 container_host: 172.16.1.10      # Should be the same target host as the inital setup
 home_dir: /var/lib/tmp           # Should match the inital setup
 report_user: ansibleacct         # Should match the intial setup 
