@@ -106,7 +106,7 @@ INJECTOR CONFIGURATION:
   slack_token: '{{ slack_token }}'
 </code></pre>
 
-##ADDITIONAL VARIABLES THAT NEED TO BE DEFINED IN TEMPLATE WHEN SENDING SLACK ALERT: 
+## ADDITIONAL VARIABLES THAT NEED TO BE DEFINED IN TEMPLATE WHEN SENDING SLACK ALERT: 
 ![image](https://user-images.githubusercontent.com/17077661/120726995-4790bc80-c48e-11eb-818b-d9b60e02d188.png)
 
 
@@ -114,7 +114,8 @@ INJECTOR CONFIGURATION:
 slackuser: Ansible Contoller   # Username that shows up as posted message in Slack
 </code></pre>
 
-Example of Alert:
+## Example of Alert:
+
 ![image](https://user-images.githubusercontent.com/17077661/122095904-c822b780-cdc2-11eb-90f1-a86bd9730f5d.png)
 
 
