@@ -9,6 +9,5 @@
         template:
           src: templates/report-osversion.j2
           dest: "{{ home_dir }}/reports/os.html"
-      ignore_unreachable: true
       run_once: True
       delegate_to: "{{ container_host }}"

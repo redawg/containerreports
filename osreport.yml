@@ -3,9 +3,10 @@
 - name: Install and configure Container for Reports
   hosts: all
   gather_facts: true
+  ignore_unreachable: true
   roles:
     - role: osreport
       tags: ['osreport']
-      
+
     - role: slackalerts
       tags: ['slackalert']
