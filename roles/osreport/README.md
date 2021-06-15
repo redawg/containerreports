@@ -14,7 +14,7 @@ Make sure you have your inventory setup this will check for facts against live r
 
 EXAMPLE:
 
-![image](https://user-images.githubusercontent.com/17077661/122108432-09ba5f00-cdd1-11eb-9771-a304822fa8a1.png)
+![image](https://user-images.githubusercontent.com/17077661/122114586-4ccc0080-cdd8-11eb-8168-d7536b10cccf.png)
 
 Notice in the credentials it has 3 creds
 1 - HOME machines   # this is your standard creds to access target report machines for gathering facts
