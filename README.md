@@ -114,5 +114,7 @@ INJECTOR CONFIGURATION:
 slackuser: Ansible Contoller   # Username that shows up as posted message in Slack
 </code></pre>
 
+Example of Alert:
+![image](https://user-images.githubusercontent.com/17077661/122095904-c822b780-cdc2-11eb-90f1-a86bd9730f5d.png)
 
 
