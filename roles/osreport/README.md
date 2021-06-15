@@ -22,7 +22,7 @@ Notice in the credentials it has 3 creds
 
 ## Extra Vars
 <pre class="line-number language-yaml">---
-channel: '#Toweralerts'          # Optional if send Slack
+channel: '#Toweralerts'          # Optional if sending Slack
 container_host: 172.16.1.10      # Should be the same target host as the inital setup
 home_dir: /var/lib/tmp           # Should match the inital setup
 report_user: ansibleacct         # Should match the intial setup 
