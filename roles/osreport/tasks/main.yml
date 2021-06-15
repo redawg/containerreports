@@ -4,8 +4,9 @@
     - name: Gather facts on inventory
       setup:
       register: all_facts
-    - name: Debug
-        var: all_facts
+    - name: Show all facts
+      debug:
+          var: all_facts
 
     - name: HTML report is created
       remote_user: "{{ report_user }}"
