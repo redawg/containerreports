@@ -1,6 +1,6 @@
 ---
 - name: Check for live devices for report
-  hosts: all
+  hosts: ios
   gather_facts: false
   tasks:
   - block:
@@ -8,7 +8,8 @@
         wait_for_connection:
           timeout: 5
         vars:
-          ansible_connection: ssh
+          ansible_connection: network_cli
+          ansible_network_os: ios
       - name: add devices with connectivity to the "running_hosts" group
         group_by:
           key: "running_hosts"
