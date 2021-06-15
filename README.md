@@ -47,5 +47,17 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/17077661/121973639-9a8e2d80-cd32-11eb-89f9-506c23cef7fb.png)
 
+## Inventory Setup
+
+In your inventory you will need to have your "Report Host" listed See Example mine report host will be 172.16.1.10 (This is needed if creds for report host differ from target report inventory  Example can be network devices and a report host:
+
+![image](https://user-images.githubusercontent.com/17077661/121973760-d1644380-cd32-11eb-89cf-1ccfaadeb34f.png)
+
+In the Variables for the Report Host please add the following line  
+<pre class="line-number language-yaml">ansible_private_key_file: "{{ my_ssh_key_file }}"</code></pre>
+
+Example:
+![image](https://user-images.githubusercontent.com/17077661/121973934-2f912680-cd33-11eb-8b08-a1fd48836267.png)
+
 
 
