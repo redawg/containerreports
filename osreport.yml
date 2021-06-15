@@ -1,6 +1,6 @@
 ---
 # Playbook to test new roles and tags
-- name: Install and configure Container for Reports
+- name: Check for live devices for report
   hosts: all
   gather_facts: false
   tasks:
