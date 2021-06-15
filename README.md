@@ -22,11 +22,11 @@ roles
 </code></pre>
 # Initial setup
 
-RHEL 8 box with SSH access and escalated Privledges
+RHEL 8 box with SSH access and escalated privledges
 
 In Ansible Controller:
 
-Create Credentials for Multiple SSH keys in a Template  (These will be used to change to access the container host to update the reports)
+Create credentials for multiple SSH keys in a template  (These will be used to change to access the container host to update the reports)
 https://access.redhat.com/solutions/3938741
 
 ## INPUT CONFIGURATION:
@@ -55,11 +55,11 @@ Example:
 
 ## Inventory Setup
 
-In your inventory you will need to have your "Report Host" listed See Example my report host will be 172.16.1.10 (This is needed if creds for report host differ from target report inventory)  Example: network devices and a report host inventory where credentials differ from networking device and report host:
+In your inventory you will need to have your "Report Host/Container Host" listed See Example my report host will be 172.16.1.10 (This is needed if creds for report host differ from target report inventory)  Example: network devices and a report host inventory where credentials differ from networking device and report host:
 
 ![image](https://user-images.githubusercontent.com/17077661/121973760-d1644380-cd32-11eb-89cf-1ccfaadeb34f.png)
 
-In the Variables for the Report Host please add the following line  
+In the Variables for the "Report Host/Container Host" please add the following line  
 <pre class="line-number language-yaml">ansible_private_key_file: "{{ my_ssh_key_file }}"</code></pre>
 
 Example:
@@ -67,13 +67,13 @@ Example:
 
 
 # Initalizing the Report Container
-You will need privledged escalation on target host the inventory can be by itself or part of the inventory of the targeted machines of the reports.  Notice I limited the template to run against my Container/report host.  You can run it without limiting and it will just delegate to the Contianer host:
+You will need privledged escalation on target host the inventory can be by itself or part of the inventory of the targeted machines of the reports.  Notice I limited the template to run against my "Report Host/Container Host".  You can run it without limiting and it will just delegate to the Contianer host:
 
 ![image](https://user-images.githubusercontent.com/17077661/121974179-b940f400-cd33-11eb-9f91-05c3948031ab.png)
 
 ## Vars needed for initcontianer.yml  (Take note as you will need these to match later in the Report template setup)
 <pre class="line-number language-yaml">---
-container_host: 172.16.1.10        # Your target host for running the container
+container_host: 172.16.1.10        # Your target host for running the container "Report Host/Container Host"
 report_user: ansibleacct           # Your account name that will be added reports to the container (ansible_user/remote_user) this should match the custome cred above
 target_port: 8081                  # Contianer port mapping and firewall port opened  Example 8081 maps to 8080 on the container
 home_dir: /var/lib/tmp             # Where the root directory is setup on the container host
