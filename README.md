@@ -22,6 +22,10 @@ roles
 </code></pre>
 # Initial setup
 
+RHEL 8 box with SSH access and escalated Privledges
+
+In Ansible Controller:
+
 Create Credentials for Multiple SSH keys in a Template  (These will be used to change to access the container host to update the reports)
 https://access.redhat.com/solutions/3938741
 
