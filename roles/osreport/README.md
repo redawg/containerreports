@@ -12,6 +12,8 @@ EXAMPLE:
 
 Make sure you have your inventory setup and you have the creds to get to all the devices to do a gather facts (This can be run against cached facts also
 
+## NOTE-  For this to work you must have run at least one successful fact gather against the devices the inventory. 
+
 EXAMPLE:
 
 ![image](https://user-images.githubusercontent.com/17077661/122108432-09ba5f00-cdd1-11eb-9771-a304822fa8a1.png)
