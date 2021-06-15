@@ -14,7 +14,7 @@
         group_by:
           key: "running_hosts"
     rescue:
-      - debug: msg="cannot connect to {{inventory_hostname}}"
+      - debug: msg="Cannot connect to {{inventory_hostname}}"
 - name: Gather facts and create report
   hosts: running_hosts
   gather_facts: false
