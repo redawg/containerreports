@@ -84,7 +84,31 @@ Linux flavor report -- https://github.com/redawg/containerreports/tree/main/role
 Ios version report  -- https://github.com/redawg/containerreports/tree/main/roles/networkverreport
 
 
+## OPTIONAL STEP FOR SLACK ALERTS: 
 
+## CREATE CUSTOM CREDS FOR SLACK API CALL:
+
+INPUT CONFIGURATION:
+
+<pre class="line-number language-yaml"><code>fields:
+  - id: slack_token
+    type: string
+    label: Slack webhook Token
+    secret: true
+</code></pre>
+
+INJECTOR CONFIGURATION:
+<pre class="line-number language-yaml"><code>extra_vars:
+  slack_token: '{{ slack_token }}'
+</code></pre>
+
+##ADDITIONAL VARIABLES THAT NEED TO BE DEFINED IN TEMPLATE WHEN SENDING SLACK ALERT: 
+![image](https://user-images.githubusercontent.com/17077661/120726995-4790bc80-c48e-11eb-818b-d9b60e02d188.png)
+
+
+<pre class="line-number language-yaml"><code>channel: '#Toweralerts'        # Channel that you want to send the Slack Alert to
+slackuser: Ansible Contoller   # Username that shows up as posted message in Slack
+</code></pre>
 
 
 
