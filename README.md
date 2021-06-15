@@ -61,7 +61,7 @@ Example:
 
 
 # Initalizing the Report Container
-You will need privledged esclastion on target host the inventory can be by itself or part of the inventory of the targeted machines of the reports.  Notice I limited the template to run against my Container/report host.  You can run it with limiting and it will just delegate to the Contianer host:
+You will need privledged escalation on target host the inventory can be by itself or part of the inventory of the targeted machines of the reports.  Notice I limited the template to run against my Container/report host.  You can run it with limiting and it will just delegate to the Contianer host:
 
 ![image](https://user-images.githubusercontent.com/17077661/121974179-b940f400-cd33-11eb-9f91-05c3948031ab.png)
 
