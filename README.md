@@ -23,7 +23,7 @@ roles
 Create Credentials for Multiple SSH keys in a Template  (These will be used to change to access the container host to update the reports)
 https://access.redhat.com/solutions/3938741
 
-#INPUT CONFIGURATION:
+# INPUT CONFIGURATION:
 <pre class="line-number language-yaml">---
 fields:
   - type: string
@@ -35,7 +35,7 @@ fields:
     id: my_ssh_key
     label: Private Key
 </code></pre>
-#INJECTOR CONFIGURATION:
+# INJECTOR CONFIGURATION:
 <pre class="line-number language-yaml">extra_vars:
   my_ssh_key_file: '{{tower.filename}}'
 file:
