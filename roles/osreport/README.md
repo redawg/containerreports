@@ -10,12 +10,7 @@ EXAMPLE:
 
 # SETUP 
 
-Make sure you have your inventory setup and you have the creds to get to all the devices to do a gather facts (This can be run against cached facts also
-
-## NOTE-  For this to work you must have run at least one successful fact gather against the devices the inventory. It will try to gather the facts for update but will fail if any inventory item has not had gather facts cached for the device if it can't reach it during run.
-
-## Solutions:   Run Gather facts and cache against all device in OS inventory.  Or disable failed device in inventory and it will be skipped.
-
+Make sure you have your inventory setup this will check for facts against live running machines with connectivity
 
 EXAMPLE:
 
