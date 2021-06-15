@@ -41,3 +41,5 @@ fields:
 file:
   template: '{{my_ssh_key}}'
 </code></pre>
+
+# Create extar SSH_Key Credentials
