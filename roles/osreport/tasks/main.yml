@@ -4,7 +4,7 @@
     - name: Gather facts on inventory
       setup:
       register: all_facts
-      ignore_unreachable: true
+      ignore_unreachable: false
     - name: Show all facts
       debug:
           var: all_facts
