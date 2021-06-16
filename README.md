@@ -7,6 +7,7 @@ initcontainer.yml               # Creates container via 2 roles setuppodam and r
 iosreport.yml                   # Main playbook to create HTML report on container host (See Below)
 osreport.yml                    # Install Podman and map port for HTML container report
 slackcustomcred.yml             # Playbook to create slackcustom creds
+additionalsshcreds.yml          # Playbook to create additional ssh creds
 
 collections
   |__requirments.yml              # Collection requirments to run roles/playbooks
@@ -34,6 +35,7 @@ In Ansible Controller:
 
 Create credentials for multiple SSH keys in a template  (These will be used to change to access the container host to update the reports)
 https://access.redhat.com/solutions/3938741 ( You can use sshcustomcred.yml)
+
 
 ## INPUT CONFIGURATION:
 <pre class="line-number language-yaml">---
