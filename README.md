@@ -6,17 +6,23 @@ cleanupreport.yml               # this removes container and home directory
 initcontainer.yml               # Creates container via 2 roles setuppodam and runreportcontinar (this creates nginx container on x host and opens firewalld)
 iosreport.yml                   # Main playbook to create HTML report on container host (See Below)
 osreport.yml                    # Install Podman and map port for HTML container report
+slackcustomcred.yml             # Playbook to create slackcustom creds
 
 collections
   |__requirments.yml              # Collection requirments to run roles/playbooks
 
 roles
   |__cleanupcontainer             # Cleans up container and home directory role
+  |__createadditionalsshcreds     # Creates custom creds for additional ssh keys on templates - https://access.redhat.com/solutions/3938741
+  |__createcustomslackcreds       # Creates custom creds for slack messages on templates
+  |__hostalive                    # Check inventory for live machines (All devics) via ssh and then creats a group called "running_host"
+  |__hostalivenetwork             # Check inventory for live machines and then creats a group called "running_host" 
   |__networkverreport             # Creates a report against IOS devices for version on box to what you want
   |__osreport                     # Creates a report against Linux devices and flavor of Linux
   |__runreportcontainer           # Spins up Blank Nginx container and home directory for report container
   |__setuppodman                  # Confirms @container_tools are installed and firewalld port is open and mapped correctly for container access
   |__slackalerts                  # role to send slack alerts to slack channels
+  
 
 
 </code></pre>
@@ -27,7 +33,7 @@ RHEL 8 box with SSH access and escalated privledges
 In Ansible Controller:
 
 Create credentials for multiple SSH keys in a template  (These will be used to change to access the container host to update the reports)
-https://access.redhat.com/solutions/3938741
+https://access.redhat.com/solutions/3938741 ( You can use sshcustomcred.yml)
 
 ## INPUT CONFIGURATION:
 <pre class="line-number language-yaml">---
