@@ -99,6 +99,7 @@ Ios version report  -- https://github.com/redawg/containerreports/tree/main/role
 ## OPTIONAL STEP FOR SLACK ALERTS: 
 
 ## CREATE CUSTOM CREDS FOR SLACK API CALL:
+You can also run slacksustomcred.yml as long as you have a Tower cred setup for templates
 
 INPUT CONFIGURATION:
 
