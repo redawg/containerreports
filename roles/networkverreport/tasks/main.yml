@@ -1,7 +1,5 @@
 ---
-    - include: preflight-checks-os-report.yml
-
-
+    - include: preflight-checks.yml
 
     - name: gathering all IOS facts
       cisco.ios.ios_facts:

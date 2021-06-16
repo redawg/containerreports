@@ -1,4 +1,6 @@
-tasks:
+---
+  - include: preflight-checks.yml
+
   - name: Creating Custom Controller Crediental for Slack messages
     tower_credential_type:
       name: "{{ slackcredname }}"

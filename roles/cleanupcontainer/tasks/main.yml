@@ -1,5 +1,5 @@
 ---
-    - include: preflight-checks-os-report.yml
+    - include: preflight-checks.yml
 
     - name: Cleanup container config
       block:

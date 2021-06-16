@@ -1,0 +1,21 @@
+---
+- include: - include: preflight-checks.yml
+- name: Additional SSH Keys
+  tower_credential_type:
+    name: Test
+    description: Test cred type playbook creation
+    kind: cloud
+    inputs: {"fields": [
+               {"id": "username","type": "string","label": "Username"},
+               {"id": "my_ssh_key","type": "string","label": "Private Key","secret": true,"multiline": true}]
+             }
+    injectors: { "extra_vars":
+                 { "my_ssh_key_file" : "{% raw %}{{tower.filename}}{% endraw %}"},
+               "file":
+                 {"template": "{% raw %}{{my_ssh_key}}{% endraw %}"}
+               }
+
+
+    state: present
+    run_once: true
+    validate_certs: false
