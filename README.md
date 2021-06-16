@@ -2,7 +2,7 @@
 This REPO contains everything you need to setup a container on RHEL 8 (Podman) and send differnet reports to that container to be viewed
 
 <pre class="line-number language-yaml"><code>
-additionalsshcreds.yml          # Playbook to create additional ssh creds
+additionalsshcred.yml          # Playbook to create additional ssh creds
 cleanupreport.yml               # this removes container and home directory
 initcontainer.yml               # Creates container via 2 roles setuppodam and runreportcontinar (this creates nginx container on x host and opens firewalld)
 iosreport.yml                   # Main playbook to create HTML report on container host (See Below)
