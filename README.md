@@ -7,6 +7,7 @@ initcontainer.yml               # Creates container via 2 roles setuppodam and r
 iosreport.yml                   # Main playbook to create HTML report on container host (See Below)
 osreport.yml                    # Install Podman and map port for HTML container report
 slackcustomcred.yml             # Playbook to create slackcustom creds
+additionalsshcreds.yml          # Playbook to create additional ssh creds
 
 collections
   |__requirments.yml              # Collection requirments to run roles/playbooks
