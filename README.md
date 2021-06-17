@@ -1,5 +1,7 @@
 # Container Reports
-This REPO contains everything you need to setup a container on RHEL 8 (Podman) and send differnet reports to that container to be viewed
+This REPO contains everything you need to spinup a container running NGNIX on RHEL 8 (Podman) and send differnet html reports that are created by ansible playbook and jinja templates to that container to be view via a browser. 
+
+
 
 <pre class="line-number language-yaml"><code>
 additionalsshcred.yml          # Playbook to create additional ssh creds
