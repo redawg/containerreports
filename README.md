@@ -1,5 +1,5 @@
 # Container Reports
-This REPO contains everything you need to spinup a container running NGNIX on RHEL 8 (Podman) and send differnet html reports that are created by ansible playbook and jinja templates to that container to be view via a browser. 
+This REPO contains everything you need to spinup a container running NGNIX on RHEL 8 (Podman) and send different html reports that are created by ansible playbook and jinja templates to that container to be view via a browser. 
 
 
 
