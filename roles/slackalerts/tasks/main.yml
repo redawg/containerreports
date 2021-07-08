@@ -1,5 +1,5 @@
 ---
-    - include: preflight-checks-os-report.yml
+    - include: preflight-checks.yml
 
     - name: Sending URL link to Slack for Reports
       remote_user: "{{ report_user }}"
