@@ -6,4 +6,4 @@
     - role: setuppodman
       tags: ['podman']
     - role: runreportcontainer
-      tags: ['startcontariner']
+      tags: ['startcontainer']
