@@ -13,5 +13,5 @@
     - role: osreport
       tags: ['osreport']
 
-#    - role: slackalerts
-#      tags: ['slackalert']
+    - role: slackalerts
+      tags: ['slackalert']
