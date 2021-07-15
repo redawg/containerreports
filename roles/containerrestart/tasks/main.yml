@@ -1,0 +1,8 @@
+---
+- include: preflight-checks.yml
+- name: Restart Container
+  containers.podman.podman_container:
+    name: report
+    state: restarted
+    run_once: True
+delegate_to: "{{ container_host }}"
