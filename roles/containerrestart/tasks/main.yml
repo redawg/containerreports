@@ -3,6 +3,7 @@
 - name: Restart Container
   containers.podman.podman_container:
     name: report
-    state: restarted
+    state: started
+    force_restart: yes
   run_once: True
   delegate_to: "{{ container_host }}"
