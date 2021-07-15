@@ -15,3 +15,6 @@
 
     - role: slackalerts
       tags: ['slackalert']
+      
+    - role: containerrestart
+      tags: ['containerrestart']
