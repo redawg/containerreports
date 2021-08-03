@@ -1,6 +1,7 @@
 ---
 - include: preflight-checks.yml
 - name: Restart Container
+  remote_user: "{{ report_user }}"
   containers.podman.podman_container:
     name: report
     state: started
