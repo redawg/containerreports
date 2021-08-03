@@ -9,5 +9,5 @@
         channel: "{{ channel }}"
         username: "{{ slackuser }}"
       run_once: true
-      delegate_to: "{{ container_host}}"
+      delegate_to: "{{ container_host }}"
       when: 'slack_token is defined'
