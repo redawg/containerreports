@@ -1,7 +1,7 @@
 ---
 - include: preflight-checks.yml
 - name: Additional SSH Keys
-  tower_credential_type:
+  ansible.controller.tower_credential_type:
     name: {{sshcredname}}
     description: Credential type for additonal sshkey on template https://access.redhat.com/solutions/3938741
     kind: cloud
