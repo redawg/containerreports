@@ -4,6 +4,7 @@
   remote_user: "{{ report_user }}"
   containers.podman.podman_container:
     name: report
+    image: quay.io/samander/nginx-report-base:latest
     state: started
     force_restart: yes
   run_once: True
