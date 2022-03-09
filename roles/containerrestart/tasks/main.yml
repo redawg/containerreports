@@ -7,11 +7,6 @@
     image: quay.io/samander/nginx-report-base
     state: started
     restart: yes
-    volume:
-      - "{{ home_dir }}/reports:/var/report:Z"
-    ports:
-      - "{{ target_port }}:8080"
-  become: yes
-  become_method: su
   run_once: True
   delegate_to: "{{ container_host }}"
+  tags: ['rebootcontainer']
