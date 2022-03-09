@@ -11,5 +11,7 @@
       - "{{ home_dir }}/reports:/var/report:Z"
     ports:
       - "{{ target_port }}:8080"
+  become: yes
+  become_user: root
   run_once: True
   delegate_to: "{{ container_host }}"
