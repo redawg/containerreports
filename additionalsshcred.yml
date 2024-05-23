@@ -4,4 +4,4 @@
   gather_facts: false
   roles:
     - role: createadditionalsshcreds
-      tags: ['sshcreds']
+      tags: [sshcreds]

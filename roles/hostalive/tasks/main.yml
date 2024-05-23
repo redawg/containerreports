@@ -1,3 +1,4 @@
+---
 - block:
     - name: determine hosts that are up
       wait_for_connection:
@@ -6,6 +7,6 @@
         ansible_connection: ssh
     - name: add devices with connectivity to the "running_hosts" group
       group_by:
-        key: "running_hosts"
+        key: running_hosts
   rescue:
     - debug: msg="Cannot connect to {{inventory_hostname}}"

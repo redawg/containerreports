@@ -1,16 +1,16 @@
 ---
-    - include: preflight-checks.yml
+- include: preflight-checks.yml
 
-    - name: Cleanup container config
-      block:
-      - name: Stop the OS Report container
-        containers.podman.podman_container:
-          name: report
-          state: absent
+- name: Cleanup container config
+  block:
+    - name: Stop the OS Report container
+      containers.podman.podman_container:
+        name: report
+        state: absent
 
-      - name: The os-report directory is removed
-        file:
-          path: "{{ home_dir }}/reports"
-          state: absent
-      run_once: True
-      delegate_to: "{{ container_host }}"
+    - name: The os-report directory is removed
+      file:
+        path: "{{ home_dir }}/reports"
+        state: absent
+  run_once: true
+  delegate_to: "{{ container_host }}"
