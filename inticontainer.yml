@@ -4,6 +4,6 @@
   gather_facts: false
   roles:
     - role: setuppodman
-      tags: ['podman']
+      tags: [podman]
     - role: runreportcontainer
-      tags: ['startcontainer']
+      tags: [startcontainer]

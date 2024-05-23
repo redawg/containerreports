@@ -4,17 +4,17 @@
   gather_facts: false
   roles:
     - role: hostalivenetwork
-      tags: ['hostalive']
+      tags: [hostalive]
 
 - name: Gather facts and create report on alive host group
   hosts: running_hosts
   gather_facts: false
   roles:
     - role: networkverreport
-      tags: ['netreport']
+      tags: [netreport]
 
     - role: slackalerts
-      tags: ['slackalert']
-      
+      tags: [slackalert]
+
     - role: containerrestart
-      tags: ['containerrestart']
+      tags: [containerrestart]

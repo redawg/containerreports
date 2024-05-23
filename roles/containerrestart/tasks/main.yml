@@ -6,7 +6,7 @@
     name: report
     image: quay.io/samander/nginx-report-base
     state: started
-    restart: yes
-  run_once: True
+    restart: true
+  run_once: true
   delegate_to: "{{ container_host }}"
-  tags: ['rebootcontainer']
+  tags: [rebootcontainer]

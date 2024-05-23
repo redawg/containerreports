@@ -1,14 +1,14 @@
 ---
-    - include: preflight-checks.yml
+- include: preflight-checks.yml
 
-    - name: gathering all IOS facts
-      cisco.ios.ios_facts:
-      register: all_facts
+- name: gathering all IOS facts
+  cisco.ios.ios_facts:
+  register: all_facts
 
-    - name: HTML report is created
-      remote_user: "{{ report_user }}"
-      template:
-        src: templates/report-ios.j2
-        dest: "{{ home_dir }}/reports/ios.html"
-      run_once: True
-      delegate_to: "{{ container_host }}"
+- name: HTML report is created
+  remote_user: "{{ report_user }}"
+  template:
+    src: templates/report-ios.j2
+    dest: "{{ home_dir }}/reports/ios.html"
+  run_once: true
+  delegate_to: "{{ container_host }}"
